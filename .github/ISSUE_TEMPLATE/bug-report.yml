@@ -1,0 +1,79 @@
+{
+  "name": "API bug",
+  "description": "Report a reproducible API error or unexpected behavior.",
+  "title": "[Bug] ",
+  "body": [
+    {
+      "type": "textarea",
+      "id": "goal",
+      "attributes": {
+        "label": "Goal and impact",
+        "description": "What are you trying to build, and how does this affect your integration?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "request",
+      "attributes": {
+        "label": "API request and affected entities",
+        "description": "HTTP method, endpoint path, sanitized parameters, and competition/season/match/team/player IDs. Never include credentials."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "expected",
+      "attributes": {
+        "label": "Expected result",
+        "description": "Describe the expected data or behavior. For format requests include a small desired-output example, field meanings, units, and granularity."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "actual",
+      "attributes": {
+        "label": "Actual result or current limitation",
+        "description": "Include a minimal sanitized example. Use synthetic data where possible."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "reproduction",
+      "attributes": {
+        "label": "Reproduction and diagnostics",
+        "description": "Minimal reproduction; UTC timestamp, HTTP status, and request/correlation ID if available. State what you verified."
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "public_safety",
+      "attributes": {
+        "label": "Public content checks",
+        "options": [
+          {
+            "label": "I searched existing issues for this request.",
+            "required": true
+          },
+          {
+            "label": "I reviewed this content and removed secrets, personal information, confidential information, and data I cannot publish.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}
